@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo For</title>
+</head>
+
+<body>
+    <script>
+	let Ncolumnas; // Creo una variable para introducir el nº de columnas deseado.
+    let Nfilas; // Creo una variable para introducir el nº de filas deseado.
+
+    Ncolumnas = parseInt(prompt("Introduce el Nº de columnas del tablero: "));
+    Nfilas = parseInt(prompt("Introduce el Nº de filas del tablero: "));
+    
+    
+    let resultado = ""; // Creo una variable con una cadena de texto vacía
+    // Creo el bucle for principal
+    for (let fila = 0; fila < Nfilas; fila = fila + 1) {
+		// Creo el bucle for secundario
+        for (let columna = 0; columna < Ncolumnas; columna = columna + 1) {
+			// Verifico si la suma de los contadores es par utilizando un operador de resto
+            // Si es par; pondrá X
+            // Si es impar; podrá O
+            if ((fila + columna) % 2 != 0)
+				resultado +="X";
+				else 
+				resultado +="O";
+				}
+                resultado += "\n"; // Añadí un salto de línea para separar en líneas del bucle principal
+			}
+            console.log(resultado)
+
+
+    </script>
+</body>
+
+</html>
